@@ -783,3 +783,7 @@
 .neg-button:active {
     background-color: #3e8e41;
 }
+
+.block-checkbox {
+    margin-right: -3.5px;
+}
