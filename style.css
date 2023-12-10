@@ -1,0 +1,785 @@
+.container {
+    display: flex;
+}
+
+.side-bar {
+    width: 200px;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+.side-bar h2 {
+    color: #333;
+}
+
+.animal-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.animal-list li {
+    padding: 8px;
+    margin-bottom: 4px;
+    background-color: #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.animal-list li:hover {
+    background-color: #ccc;
+}
+
+.tab-container {
+    margin-left: 20px; /* Adjust this value to control the space between the sidebar and tabs */
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    background-color: #eee;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: #ddd;
+}
+
+.tab.active {
+    background-color: #ddd;
+}
+
+.tab:active {
+    background-color: #ccc;
+}
+
+.editor-container {
+    position: relative;
+}
+
+.editor {
+    display: none;
+}
+
+.editor.active {
+    display: block;
+}
+
+/* Add your custom styles here if needed */
+.container {
+    display: flex;
+}
+
+.side-bar {
+    width: 200px;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+.side-bar h2 {
+    color: #333;
+}
+
+.animal-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.animal-list li {
+    padding: 8px;
+    margin-bottom: 4px;
+    background-color: #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.animal-list li:hover {
+    background-color: #ccc;
+}
+
+.tab-container {
+    margin-left: 20px; /* Adjust this value to control the space between the sidebar and tabs */
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    background-color: #eee;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: #ddd;
+}
+
+.tab.active {
+    background-color: #ddd;
+}
+
+.tab:active {
+    background-color: #ccc;
+}
+
+.editor-container {
+    position: relative;
+}
+
+.editor {
+    display: none;
+    width: 400px; /* Set the fixed width for all editors */
+    margin: auto; /* Center the editors within the container */
+}
+
+.editor.active {
+    display: block;
+}
+/* Add your custom styles here if needed */
+.container {
+    display: flex;
+}
+
+.side-bar {
+    width: 200px;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+.side-bar h2 {
+    color: #333;
+}
+
+.aff-blocks-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.aff-blocks-list li {
+    padding: 8px;
+    margin-bottom: 4px;
+    background-color: #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.aff-blocks-list li:hover {
+    background-color: #ccc;
+}
+
+.tab-container {
+    margin-left: 20px; /* Adjust this value to control the space between the sidebar and tabs */
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    background-color: #eee;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: #ddd;
+}
+
+.tab.active {
+    background-color: #ddd;
+}
+
+.tab:active {
+    background-color: #ccc;
+}
+
+.editor-container {
+    position: relative;
+}
+
+.editor {
+    display: none;
+    width: 600px; /* Set the fixed width for all editors */
+    margin: auto; /* Center the editors within the container */
+}
+
+.editor.active {
+    display: block;
+}
+/* Add your custom styles here if needed */
+.container {
+    display: flex;
+}
+
+.side-bar {
+    width: 200px;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+.side-bar h2 {
+    color: #333;
+}
+
+.aff-blocks-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.aff-blocks-list li {
+    padding: 8px;
+    margin-bottom: 4px;
+    background-color: #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.aff-blocks-list li:hover {
+    background-color: #ccc;
+}
+
+.tab-container {
+    margin-left: 20px; /* Adjust this value to control the space between the sidebar and tabs */
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    background-color: #eee;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: #ddd;
+}
+
+.tab.active {
+    background-color: #ddd;
+}
+
+.tab:active {
+    background-color: #ccc;
+}
+
+.editor-container {
+    position: relative;
+}
+
+.editor {
+    display: none;
+    width: 400px; /* Set the fixed width for all editors */
+    margin: auto; /* Center the editors within the container */
+}
+
+.editor.active {
+    display: block;
+}
+/* Add your custom styles here if needed */
+.container {
+    display: flex;
+}
+
+.side-bar {
+    width: 200px;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+.side-bar h2 {
+    color: #333;
+}
+
+.aff-blocks-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.aff-blocks-list li {
+    padding: 8px;
+    margin-bottom: 4px;
+    background-color: #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.aff-blocks-list li:hover {
+    background-color: #ccc;
+}
+
+.tab-container {
+    margin-left: 20px; /* Adjust this value to control the space between the sidebar and tabs */
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    background-color: #eee;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: #ddd;
+}
+
+.tab.active {
+    background-color: #ddd;
+}
+
+.tab:active {
+    background-color: #ccc;
+}
+
+.editor-container {
+    position: relative;
+}
+
+.editor {
+    display: none;
+    width: 800px; /* Set the fixed width for all editors */
+    margin: auto; /* Center the editors within the container */
+}
+
+.editor.active {
+    display: block;
+}
+/* Add your custom styles here if needed */
+.container {
+    display: flex;
+}
+
+.side-bar {
+    width: 200px;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+.side-bar h2 {
+    color: #333;
+}
+
+.aff-blocks-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.aff-blocks-list li {
+    padding: 8px;
+    margin-bottom: 4px;
+    background-color: #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.aff-blocks-list li:hover {
+    background-color: #ccc;
+}
+
+.tab-container {
+    margin-left: 20px; /* Adjust this value to control the space between the sidebar and tabs */
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    background-color: #eee;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: #ddd;
+}
+
+.tab.active {
+    background-color: #ddd;
+}
+
+.tab:active {
+    background-color: #ccc;
+}
+
+.editor-container {
+    position: relative;
+}
+
+.editor {
+    display: block;
+    width: 800px; /* Set the fixed width for all editors */
+    margin: auto; /* Center the editors within the container */
+}
+
+.editor.active {
+    display: block;
+}
+/* Add your custom styles here if needed */
+.container {
+    display: flex;
+}
+
+.side-bar {
+    width: 200px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    margin-right: 20px; /* Add margin to separate the two sidebars */
+}
+
+.side-bar h2 {
+    color: #333;
+}
+
+.aff-blocks-list,
+.block-summaries-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.aff-blocks-list li,
+.block-summaries-list li {
+    padding: 8px;
+    margin-bottom: 4px;
+    background-color: #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.aff-blocks-list li:hover,
+.block-summaries-list li:hover {
+    background-color: #ccc;
+}
+
+.tab-container {
+    margin-left: 20px; /* Adjust this value to control the space between the sidebar and tabs */
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    background-color: #eee;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: #ddd;
+}
+
+.tab.active {
+    background-color: #ddd;
+}
+
+.tab:active {
+    background-color: #ccc;
+}
+
+.editor-container {
+    position: relative;
+}
+
+.editor {
+    display: block;
+    width: 800px; /* Set the fixed width for all editors */
+    margin: auto; /* Center the editors within the container */
+}
+
+.editor.active {
+    display: block;
+}
+/* Add your custom styles here if needed */
+.container {
+    display: flex;
+}
+
+.side-bar {
+    padding: 20px;
+    background-color: #f2f2f2;
+    margin-right: 20px; /* Add margin to separate the two sidebars */
+}
+
+.aff-blocks-list,
+.block-summaries-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.aff-blocks-list li,
+.block-summaries-list li {
+    padding: 8px;
+    margin-bottom: 4px;
+    background-color: #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.aff-blocks-list li:hover,
+.block-summaries-list li:hover {
+    background-color: #ccc;
+}
+
+.tab-container {
+    margin-left: 20px; /* Adjust this value to control the space between the sidebar and tabs */
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    background-color: #eee;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: #ddd;
+}
+
+.tab.active {
+    background-color: #ddd;
+}
+
+.tab:active {
+    background-color: #ccc;
+}
+
+.editor-container {
+    position: relative;
+}
+
+.editor {
+    display: block;
+    width: 800px; /* Set the fixed width for all editors */
+    margin: auto; /* Center the editors within the container */
+}
+
+.editor.active {
+    display: block;
+}
+
+/* Adjust the widths for the sidebars */
+.side-bar {
+    width: 180px; /* 200px - 75px */
+}
+
+.side-bar:nth-child(2) {
+    width: 320px; /* 200px + 120px */
+}
+/* Add your custom styles here if needed */
+.container {
+    display: flex;
+}
+
+.side-bar {
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+.aff-blocks-list,
+.block-summaries-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.aff-blocks-list li,
+.block-summaries-list li {
+    padding: 8px;
+    margin-bottom: 4px;
+    background-color: #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.aff-blocks-list li:hover,
+.block-summaries-list li:hover {
+    background-color: #ccc;
+}
+
+.tab-container {
+    margin-left: 20px; /* Adjust this value to control the space between the sidebar and tabs */
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    background-color: #eee;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: #ddd;
+}
+
+.tab.active {
+    background-color: #ddd;
+}
+
+.tab:active {
+    background-color: #ccc;
+}
+
+.editor-container {
+    position: relative;
+}
+
+.editor {
+    display: block;
+    width: 800px; /* Set the fixed width for all editors */
+    margin: auto; /* Center the editors within the container */
+}
+
+.editor.active {
+    display: block;
+}
+
+/* Adjust the widths for the sidebars */
+.side-bar {
+    width: 180px; /* 200px - 75px */
+}
+
+.side-bar:nth-child(2) {
+    width: 320px; /* 200px + 120px */
+    margin-right: 5px; /* Adjust this value to control the space between the two sidebars */
+}
+/* Adjust the widths for the sidebars */
+.side-bar {
+    width: 180px; /* 200px - 75px */
+}
+
+.side-bar:nth-child(2) {
+    width: 320px; /* 200px + 120px */
+    margin-right: 0.5px; /* Adjust this value to control the space between the two sidebars */
+}
+/* Adjust the widths for the sidebars */
+.side-bar {
+    width: 180px; /* 200px - 75px */
+}
+
+.side-bar:nth-child(2) {
+    width: 320px; /* 200px + 120px */
+    margin-right: 2px; /* Adjust this value to control the space between the two sidebars */
+}
+
+.editor {
+    display: block;
+    width: 600px; /* Set the fixed width for all editors (800px - 150px) */
+    margin: auto; /* Center the editors within the container */
+}
+
+.editor.active {
+    display: block;
+}
+
+/* Additional styles for the home page */
+.home-container {
+    text-align: center;
+    padding: 50px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.aff-button,
+.neg-button {
+    display: inline-block;
+    padding: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.aff-button:hover,
+.neg-button:hover {
+    background-color: #45a049;
+}
+
+.aff-button:active,
+.neg-button:active {
+    background-color: #3e8e41;
+}
