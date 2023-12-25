@@ -6,13 +6,204 @@
     <title>Aff Page</title>
     <link href="style.css" rel="stylesheet">
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+<style>
+.custom-list {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0;
+}
+
+.custom-list li {
+    background-color: #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+}
+.custom-list {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0;
+}
+
+.custom-list li {
+    background-color: #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.custom-list li:hover {
+    background-color: #a3c2c2; /* Change the background color on hover */
+}
+
+        .custom-list {
+            list-style-type: none; /* Remove default list styles */
+            padding: 0;
+        }
+
+        .custom-list li {
+            background-color: #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px 0;
+            transition: background-color 0.3s ease; /* Smooth transition effect */
+            cursor: pointer;
+        }
+
+        .custom-list li:hover {
+            background-color: #a3c2c2; /* Change the background color on hover */
+        }
+
+        .custom-list li.selected {
+            background-color: #4caf50; /* Green color when selected */
+            color: #fff; /* White text on green background */
+        }
+        .custom-list {
+            list-style-type: none; /* Remove default list styles */
+            padding: 0;
+        }
+
+        .custom-list li {
+            background-color: #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px 0;
+            transition: background-color 0.3s ease; /* Smooth transition effect */
+            cursor: pointer;
+            width:200px
+        }
+
+        .custom-list li:hover {
+            background-color: #a3c2c2; /* Change the background color on hover */
+        }
+
+        .custom-list li.selected {
+            background-color: #4caf50; /* Green color when selected */
+            color: #fff; /* White text on green background */
+        }
+        .custom-list2 {
+            list-style-type: none; /* Remove default list styles */
+            padding: 0;
+        }
+
+        .custom-list2 li {
+            background-color: #4caf50;
+            color:#fff;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px 0;
+            transition: background-color 0.3s ease; /* Smooth transition effect */
+            cursor: pointer;
+            width:220px
+        }
+
+        .custom-list2 li:hover {
+            background-color: #a3c2c2; /* Change the background color on hover */
+        }
+
+        .custom-list2 li.selected {
+            background-color: #ddd; /* Green color when selected */
+            color: black; /* White text on green background */
+        }
+
+        
+
+
+
+
+
+
+        .custom-list3 {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0;
+}
+
+.custom-list3 li {
+    background-color: #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+}
+.custom-list3 {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0;
+}
+
+.custom-list3 li {
+    background-color: #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.custom-list3 li:hover {
+    background-color: #a3c2c2; /* Change the background color on hover */
+}
+
+        .custom-list3 {
+            list-style-type: none; /* Remove default list styles */
+            padding: 0;
+        }
+
+        .custom-list3 li {
+            background-color: #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px 0;
+            transition: background-color 0.3s ease; /* Smooth transition effect */
+            cursor: pointer;
+        }
+
+        .custom-list3 li:hover {
+            background-color: #a3c2c2; /* Change the background color on hover */
+        }
+
+        .custom-list3 li.selected {
+            background-color: #4caf50; /* Green color when selected */
+            color: #fff; /* White text on green background */
+        }
+        .custom-list3 {
+            list-style-type: none; /* Remove default list styles */
+            padding: 0;
+        }
+
+        .custom-list3 li {
+            background-color: #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px 0;
+            transition: background-color 0.3s ease; /* Smooth transition effect */
+            cursor: pointer;
+            width:333px
+        }
+
+        .custom-list3 li:hover {
+            background-color: #a3c2c2; /* Change the background color on hover */
+        }
+
+        .custom-list3 li.selected {
+            background-color: #4caf50; /* Green color when selected */
+            color: #fff; /* White text on green background */
+        }
+        </style>
+
 </head>
 <body>
 
 <div class="container">
     <div class="side-bar">
         <h2>Aff Blocks</h2>
-        <ul class="aff-blocks-list">            <li><input type="checkbox" class="block-checkbox" /> (Item)</li>
+        <ul class="aff-blocks-list">        
+            <ul class="custom-list" onclick="toggleAndCopyToClipboard(event)">
+                <li>Block 1</li>
+                <li>Block 2</li>
+                <li>Block 3</li>
+                <li>Block 4</li>
+                <li>Block 5</li>
+                <li>Block 6</li>
+  
+            </ul>
 
             <!-- Repeat for the other 39 empty list items -->
         </ul>
@@ -21,12 +212,15 @@
     <div class="side-bar">
         <h2>Block Summaries</h2>
         <ul class="block-summaries-list">
-            <li>
-                <input type="checkbox" class="block-checkbox" />
-                <span>1. </span>
-                <span>2. </span>
-                <span>3. </span>
-            </li>
+            <ul class="custom-list3" onclick="toggleAndCopyToClipboard(event)">
+                <li><span>1. </span><span>2. </span><span>3. </span></li>
+                <li><span>1. </span><span>2. </span><span>3. </span></li>
+                <li><span>1. </span><span>2. </span><span>3. </span></li>
+                <li><span>1. </span><span>2. </span><span>3. </span></li>
+                <li><span>1. </span><span>2. </span><span>3. </span></li>
+                <li><span>1. </span><span>2. </span><span>3. </span></li>
+  
+            </ul>
             <!-- Repeat for the other 39 list items -->
         </ul>
     </div>
@@ -53,6 +247,16 @@
 
 <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 <script src="script.js"></script>
+<script>
+ function toggleAndCopyToClipboard(event) {
+            if (event.target.tagName === 'LI') {
+                const listItemText = event.target.innerText.trim();
+                navigator.clipboard.writeText(listItemText);
 
+                event.target.classList.toggle('selected');
+            }
+        }
+
+</script>
 </body>
 </html>

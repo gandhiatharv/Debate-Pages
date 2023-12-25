@@ -787,3 +787,102 @@
 .block-checkbox {
     margin-right: -3.5px;
 }
+
+.custom-list {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0;
+}
+
+.custom-list li {
+    background-color: #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+}
+.custom-list {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0;
+}
+
+.custom-list li {
+    background-color: #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+.custom-list li:hover {
+    background-color: #a3c2c2; /* Change the background color on hover */
+}
+
+        .custom-list {
+            list-style-type: none; /* Remove default list styles */
+            padding: 0;
+        }
+
+        .custom-list li {
+            background-color: #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px 0;
+            transition: background-color 0.3s ease; /* Smooth transition effect */
+            cursor: pointer;
+        }
+
+        .custom-list li:hover {
+            background-color: #a3c2c2; /* Change the background color on hover */
+        }
+
+        .custom-list li.selected {
+            background-color: #4caf50; /* Green color when selected */
+            color: #fff; /* White text on green background */
+        }
+        .custom-list {
+            list-style-type: none; /* Remove default list styles */
+            padding: 0;
+        }
+
+        .custom-list li {
+            background-color: #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px 0;
+            transition: background-color 0.3s ease; /* Smooth transition effect */
+            cursor: pointer;
+            width:280px
+        }
+
+        .custom-list li:hover {
+            background-color: #a3c2c2; /* Change the background color on hover */
+        }
+
+        .custom-list li.selected {
+            background-color: #4caf50; /* Green color when selected */
+            color: #fff; /* White text on green background */
+        }
+        .custom-list2 {
+            list-style-type: none; /* Remove default list styles */
+            padding: 0;
+        }
+
+        .custom-list2 li {
+            background-color: #4caf50;
+            color:#fff;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px 0;
+            transition: background-color 0.3s ease; /* Smooth transition effect */
+            cursor: pointer;
+            width:280px
+        }
+
+        .custom-list2 li:hover {
+            background-color: #a3c2c2; /* Change the background color on hover */
+        }
+
+        .custom-list2 li.selected {
+            background-color: #ddd; /* Green color when selected */
+            color: black; /* White text on green background */
+        }
+        
