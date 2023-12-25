@@ -175,7 +175,8 @@
             margin: 5px 0;
             transition: background-color 0.3s ease; /* Smooth transition effect */
             cursor: pointer;
-            width:333px
+            width:352px;
+            margin-left: -15px;
         }
 
         .custom-list3 li:hover {
@@ -186,6 +187,78 @@
             background-color: #4caf50; /* Green color when selected */
             color: #fff; /* White text on green background */
         }
+
+        
+        .custom-list8 {
+            list-style-type: none; /* Remove default list styles */
+            padding: 0;
+        }
+        
+        .custom-list8 li {
+            background-color: #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px 0;
+        }
+        .custom-list8 {
+            list-style-type: none; /* Remove default list styles */
+            padding: 0;
+        }
+        
+        .custom-list8 li {
+            background-color: #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px 0;
+            transition: background-color 0.3s ease; /* Smooth transition effect */
+        }
+        
+        .custom-list8 li:hover {
+            background-color: #a3c2c2; /* Change the background color on hover */
+        }
+        
+                .custom-list8 {
+                    list-style-type: none; /* Remove default list styles */
+                    padding: 0;
+                }
+        
+                .custom-list8 li {
+                    background-color: #ddd;
+                    border-radius: 5px;
+                    padding: 10px;
+                    margin: 5px 0;
+                    transition: background-color 0.3s ease; /* Smooth transition effect */
+                    cursor: pointer;
+                }
+        
+                .custom-list8 li:hover {
+                    background-color: #a3c2c2; /* Change the background color on hover */
+                }
+        
+                .custom-list8 {
+                    list-style-type: none; /* Remove default list styles */
+                    padding: 0;
+                }
+        
+                .custom-list8 li {
+                    background-color: #ddd;
+                    border-radius: 5px;
+                    padding: 10px;
+                    margin: 5px 0;
+                    transition: background-color 0.3s ease; /* Smooth transition effect */
+                    cursor: pointer;
+                    width:200px;
+                }
+        
+                .custom-list8 li:hover {
+                    background-color: darkgray; /* Change the background color on hover */
+                }
+                .block-checkbox {
+        transform: scale(1.9); /* Adjust the scale factor as needed */
+        margin-right: 2px; /* Add some margin to separate checkbox from text */
+        margin-left: -22px; /* Add some margin to separate checkbox from text */
+
+    }
         </style>
 
 </head>
@@ -194,18 +267,13 @@
 <div class="container">
     <div class="side-bar">
         <h2>Aff Blocks</h2>
-        <ul class="aff-blocks-list">        
-            <ul class="custom-list" onclick="toggleAndCopyToClipboard(event)">
-                <li>Block 1</li>
-                <li>Block 2</li>
-                <li>Block 3</li>
-                <li>Block 4</li>
-                <li>Block 5</li>
-                <li>Block 6</li>
-  
-            </ul>
+        <ul class="aff-blocks-list">          <ul class="custom-list8" onclick="toggleAndCopyToClipboard(event)">
+            <li><input type="checkbox" class="block-checkbox" /> Block 1</li>
+            <li><input type="checkbox" class="block-checkbox" /> Block 2</li>
 
-            <!-- Repeat for the other 39 empty list items -->
+        </ul>
+
+        <!-- Repeat for the other 39 empty list items -->
         </ul>
     </div>
 
