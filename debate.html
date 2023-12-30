@@ -18,8 +18,130 @@
   />
     <link href="style.css" rel="stylesheet">
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <script src="sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="sweetalert.css">
+  
+<script>
+   
+   function saveProgress() {
+    // Get all editor elements with the specified data attribute
+    
 
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(function (checkbox, index) {
+        localStorage.setItem('checkbox_state_' + index, checkbox.checked);
+    });
+}
+
+function loadProgress() {
+    
+
+    var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(function (checkbox, index) {
+        var checkboxState = localStorage.getItem('checkbox_state_' + index);
+        if (checkboxState) {
+            checkbox.checked = checkboxState === 'true';
+        }
+    });
+}
+
+
+
+</script>
 <style>
+            h1 {
+            font-size: 36px;
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+
+        #timer-container {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            margin-left: 30px;
+        }
+
+        #special {
+            margin-left: 30px;
+        }
+
+        #timer {
+            font-size: 36px;
+            margin-bottom: 20px;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            border: 10px solid #3498db;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #timer span {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        #controls-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: left;
+        }
+        
+
+        button {
+            background-color: #3498db;
+        }
+
+        select {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        button:hover, select:hover {
+            background-color: #2980b9;
+        }
+       
+
+
+        button, select {
+            font-size: 18px;
+            margin: 10px;
+            padding: 12px 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        button {
+            background-color: #3498db;
+        }
+
+        select {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        button:hover, select:hover {
+            background-color: #2980b9;
+        }
+h1{
+    color:black;
+}
+     
+
+        #timeSelector {
+            padding: 8px;
+        }
+
 .custom-list {
     list-style-type: none; /* Remove default list styles */
     padding: 0;
@@ -271,6 +393,53 @@
         margin-left: -22px; /* Add some margin to separate checkbox from text */
 
     }
+
+    #timer-container {
+            display: flex;
+            flex-direction: column;
+            margin-right: 30px;
+        }
+
+        #timer {
+            font-size: 36px;
+            margin-bottom: 20px;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            border: 10px solid #cdb5ff;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #timer span {
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        #controls-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        button, select {
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .roli {
+            display: flex;
+            align-items: flex-start;
+            padding: 10px;
+            
+        }
+        #special {
+            margin-left: 30px;
+        }
+        
         </style>
 
 </head>
@@ -280,8 +449,8 @@
     <div class="side-bar">
         <h2>Aff Blocks</h2>
         <ul class="aff-blocks-list">          <ul class="custom-list8" onclick="toggleAndCopyToClipboard(event)">
-            <li><input type="checkbox" class="block-checkbox" /> Block 1</li>
-            <li><input type="checkbox" class="block-checkbox" /> Block 2</li>
+            <li><input type="checkbox" class="block-checkbox" onchange="saveProgress()"/> Block 1</li>
+            <li><input type="checkbox" class="block-checkbox" onchange="saveProgress()"/> Block 2</li>
 
         </ul>
 
@@ -304,6 +473,11 @@
             <!-- Repeat for the other 39 list items -->
         </ul>
     </div>
+<br>
+    <!--starts now -->
+   
+        
+       <!-- ends now-->
 
     <div class="tab-container">
         <div class="tabs">
@@ -315,16 +489,88 @@
             <div class="tab" id="tab6" onclick="changeTab(6)">Document 6</div>
         </div>
         <div class="editor-container">
-            <div id="editor1" class="editor"></div>
-            <div id="editor2" class="editor"></div>
-            <div id="editor3" class="editor"></div>
-            <div id="editor4" class="editor"></div>
-            <div id="editor5" class="editor"></div>
-            <div id="editor6" class="editor"></div>
+            <div data-category="editor" id="editor1" class="editor"></div>
+            <div data-category="editor" id="editor2" class="editor"></div>
+            <div data-category="editor" id="editor3" class="editor"></div>
+            <div data-category="editor" id="editor4" class="editor"></div>
+            <div data-category="editor" id="editor5" class="editor"></div>
+            <div data-category="editor" id="editor6" class="editor"></div>
         </div>
     </div>
 </div>
 
+<div id="timer-container">
+<h1>Speech Timer</h1>
+    <div id="extra-container">
+
+    <div id="timer">
+        <div id="extratimer">
+
+        <div id="minutes">Loading...</div>
+        <span>minutes</span>
+        </div>
+    </div>
+
+    <div id="controls-container">
+        <select id="timeSelector" onchange="jumpToTimeBlock()">
+            <option value="0">AC: 6 minutes</option>
+            <option value="1">NC: 7 minutes</option>
+            <option value="2">1AR: 4 minutes</option>
+            <option value="3">NR: 6 minutes</option>
+            <option value="4">2AR: 3 minutes</option>
+        </select>
+
+        <button id="playButton" onclick="playTimer()">Play</button>
+        <button id="pauseButton" onclick="pauseTimer()" style="display: none;">Pause</button>
+        <button id="resetButton" onclick="resetTimer()">Reset</button>
+        <button id="restartCycleButton" onclick="restartCycle()">Restart Cycle</button>
+    </div>
+    </div>
+</div>
+
+<div class="roli">
+
+<div id="timer-container">
+    <h1>My Prep Time</h1>
+
+    <div id="timer">
+        <div id="minutes1">Loading...</div>
+        <span>minutes</span>
+    </div>
+
+    <div id="controls-container">
+   
+
+        <button id="playButton1" onclick="playTimer1()">Running Prep</button>
+        <button id="pauseButton1" onclick="pauseTimer1()" style="display: none;">Stopping Prep</button>
+        <button id="resetButton1" onclick="resetTimer1()">Reset</button>
+    </div>
+    
+</div>
+
+
+<div id="timer-container">
+    <h1>Opponent's Prep Time</h1>
+
+    <div id="timer">
+        <div id="minutes2">Loading...</div>
+        <span>minutes</span>
+    </div>
+
+    <div id="controls-container">
+   
+
+        <button id="playButton2" onclick="playTimer2()">Running Prep</button>
+        <button id="pauseButton2" onclick="pauseTimer2()" style="display: none;">Stopping Prep</button>
+        <button id="resetButton2" onclick="resetTimer2()">Reset</button>
+    </div>
+    
+</div>
+</div>
+
+<audio id="timerSound" src="alarm1.mp3"></audio>
+<audio id="timerSound1" src="prepalarm.mp3"></audio>
+<audio id="timerSound2" src="prepalarm.mp3"></audio>
 <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 <script src="script.js"></script>
 <script>
@@ -337,6 +583,268 @@
             }
         }
 
+        const durations = [6 * 60, 7 * 60, 4 * 60, 6 * 60, 3 * 60]; // Durations in seconds
+        let currentTimer = 0;
+        let timerInterval;
+        let isPaused = true;
+
+        function formatTime(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = seconds % 60;
+            return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+        }
+
+        function updateTimer() {
+            const timerElement = document.getElementById('minutes');
+            timerElement.textContent = formatTime(durations[currentTimer]);
+
+            if (durations[currentTimer] > 0 && !isPaused) {
+                durations[currentTimer]--;
+            } else if (durations[currentTimer] === 0) {
+                clearInterval(timerInterval);
+                document.getElementById('timeSelector').selectedIndex +=1; // Reset dropdown to the first time block
+                playSound(); // Play sound when timer goes off
+                currentTimer++;
+
+                if (currentTimer < durations.length) {
+                    resetTimer();
+                } else {
+                    timerElement.textContent = 'Debate Finished!';
+                    showPlayButton();
+                }
+            }
+        }
+
+        function playSound() {
+            const sound = document.getElementById('timerSound');
+            sound.play();
+        }
+
+        function startTimer() {
+            clearInterval(timerInterval);
+            timerInterval = setInterval(updateTimer, 1000);
+            updateTimer();
+        }
+
+        function showPlayButton() {
+            document.getElementById('playButton').style.display = 'inline-block';
+            document.getElementById('pauseButton').style.display = 'none';
+        }
+
+        function showPauseButton() {
+            document.getElementById('playButton').style.display = 'none';
+            document.getElementById('pauseButton').style.display = 'inline-block';
+        }
+
+        function playTimer() {
+            isPaused = false;
+            showPauseButton();
+            startTimer();
+        }
+
+        function pauseTimer() {
+            isPaused = true;
+            showPlayButton();
+        }
+
+        function resetTimer() {
+            clearInterval(timerInterval);
+            isPaused = true;
+            durations[currentTimer] = initialDurations[currentTimer];
+            document.getElementById('minutes').textContent = formatTime(durations[currentTimer]);
+            showPlayButton();
+        }
+
+        function jumpToTimeBlock() {
+            const selector = document.getElementById('timeSelector');
+            currentTimer = parseInt(selector.value);
+            resetTimer();
+        }
+
+        function restartCycle() {
+            currentTimer = 0;
+            resetTimer();
+            document.getElementById('timeSelector').selectedIndex = 0; // Reset dropdown to the first time block
+        }
+
+        // Initialize durations array and display the initial time
+        const initialDurations = [...durations];
+        document.getElementById('minutes').textContent = formatTime(durations[currentTimer]);
+    
+        const durations1 = [4 * 60]; // Durations1 in seconds
+        let currentTimer1 = 0;
+        let timerInterval1;
+        let isPaused1 = true;
+
+        function formatTime1(seconds) {
+            const minutes1 = Math.floor(seconds / 60);
+            const remainingSeconds1 = seconds % 60;
+            return `${minutes1}:${remainingSeconds1 < 10 ? '0' : ''}${remainingSeconds1}`;
+        }
+
+        function updateTimer1() {
+            const timerElement1 = document.getElementById('minutes1');
+            timerElement1.textContent = formatTime1(durations1[currentTimer1]);
+
+            if (durations1[currentTimer1] > 0 && !isPaused1) {
+                durations1[currentTimer1]--;
+            } else if (durations1[currentTimer1] === 0) {
+                clearInterval(timerInterval1); 
+                playSound1(); // Play sound when timer goes off
+                currentTimer1++;
+
+                if (currentTimer1 < durations1.length) {
+                    resetTimer1();
+                } else {
+                    timerElement1.textContent = 'Your Prep Finished';
+                    showPlayButton1();
+                }
+            }
+        }
+        function playSound1() {
+            const sound = document.getElementById('timerSound1');
+            sound.play();
+        }
+
+        function startTimer1() {
+            clearInterval(timerInterval1);
+            timerInterval1 = setInterval(updateTimer1, 1000);
+            updateTimer1();
+        }
+
+        function showPlayButton1() {
+            document.getElementById('playButton1').style.display = 'inline-block';
+            document.getElementById('pauseButton1').style.display = 'none';
+        }
+
+        function showPauseButton1() {
+            document.getElementById('playButton1').style.display = 'none';
+            document.getElementById('pauseButton1').style.display = 'inline-block';
+        }
+
+        function playTimer1() {
+            isPaused1 = false;
+            showPauseButton1();
+            startTimer1();
+        }
+
+        function pauseTimer1() {
+            isPaused1 = true;
+            showPlayButton1();
+        }
+
+        function resetTimer1() {
+            clearInterval(timerInterval1);
+            isPaused1 = true;
+            durations1[currentTimer1] = initialDurations1[currentTimer1];
+            document.getElementById('minutes1').textContent = formatTime1(durations1[currentTimer1]);
+            showPlayButton1();
+        }
+
+        function jumpToTimeBlock1() {
+            const selector1 = document.getElementById('timeSelector1');
+            currentTimer1 = parseInt(selector1.value);
+            resetTimer1();
+        }
+
+        function restartCycle1() {
+            currentTimer1 = 0;
+            resetTimer1();
+            document.getElementById('timeSelector1').selectedIndex = 0; // Reset dropdown to the first time block
+        }
+
+        // Initialize durations1 array and display the initial time
+        const initialDurations1 = [...durations1];
+        document.getElementById('minutes1').textContent = formatTime1(durations1[currentTimer1]);
+    
+        const durations2 = [4 * 60]; // Durations2 in seconds
+let currentTimer2 = 0;
+let timerInterval2;
+let isPaused2 = true;
+
+function formatTime2(seconds) {
+    const minutes2 = Math.floor(seconds / 60);
+    const remainingSeconds2 = seconds % 60;
+    return `${minutes2}:${remainingSeconds2 < 10 ? '0' : ''}${remainingSeconds2}`;
+}
+
+function updateTimer2() {
+    const timerElement2 = document.getElementById('minutes2');
+    timerElement2.textContent = formatTime2(durations2[currentTimer2]);
+
+    if (durations2[currentTimer2] > 0 && !isPaused2) {
+        durations2[currentTimer2]--;
+    } else if (durations2[currentTimer2] === 0) {
+        clearInterval(timerInterval2);
+        playSound2(); // Play sound when timer goes off
+        currentTimer2++;
+
+        if (currentTimer2 < durations2.length) {
+            resetTimer2();
+        } else {
+            timerElement2.textContent = "Opponent's Prep Finished";
+            showPlayButton2();
+        }
+    }
+}
+function playSound2() {
+    const sound = document.getElementById('timerSound2');
+    sound.play();
+}
+
+function startTimer2() {
+    clearInterval(timerInterval2);
+    timerInterval2 = setInterval(updateTimer2, 1000);
+    updateTimer2();
+}
+
+function showPlayButton2() {
+    document.getElementById('playButton2').style.display = 'inline-block';
+    document.getElementById('pauseButton2').style.display = 'none';
+}
+
+function showPauseButton2() {
+    document.getElementById('playButton2').style.display = 'none';
+    document.getElementById('pauseButton2').style.display = 'inline-block';
+}
+
+function playTimer2() {
+    isPaused2 = false;
+    showPauseButton2();
+    startTimer2();
+}
+
+function pauseTimer2() {
+    isPaused2 = true;
+    showPlayButton2();
+}
+
+function resetTimer2() {
+    clearInterval(timerInterval2);
+    isPaused2 = true;
+    durations2[currentTimer2] = initialDurations2[currentTimer2];
+    document.getElementById('minutes2').textContent = formatTime2(durations2[currentTimer2]);
+    showPlayButton2();
+}
+
+function jumpToTimeBlock2() {
+    const selector2 = document.getElementById('timeSelector2');
+    currentTimer2 = parseInt(selector2.value);
+    resetTimer2();
+}
+
+function restartCycle2() {
+    currentTimer2 = 0;
+    resetTimer2();
+    document.getElementById('timeSelector2').selectedIndex = 0; // Reset dropdown to the first time block
+}
+
+// Initialize durations2 array and display the initial time
+const initialDurations2 = [...durations2];
+document.getElementById('minutes2').textContent = formatTime2(durations2[currentTimer2]);
+
 </script>
+<script src="x.js"></script>
+
 </body>
 </html>
